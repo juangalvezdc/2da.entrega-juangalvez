@@ -1,173 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-    padding: 0;
-    background-color: #e488bb31;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  /* Definición de colores */
+  --color-primario: #1f4068;
+  /* Azul profundo */
+  --color-secundario: #f73859;
+  /* Rojo vibrante */
+  --color-acento: #f0ece2;
+  /* Blanco hueso */
+  --color-fondo: #f0f0f0;
+  /* Gris claro */
+  --color-texto: #333;
+  /* Texto oscuro */
+}
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
 
 header {
-    background-color: linear-gradient(to bottom, rgb(212, 66, 66), rgba(0, 0, 0, 0));
-    background-size: cover;
-    backdrop-filter: blur(0px);
-    /* Ajusta el desenfoque según prefieras */
-    padding: 15px;
-    text-align: center;
+  background-color: var(--color-primario);
+  color: #fff;
+  /* Texto blanco para contraste */
+  padding: 15px;
+  text-align: center;
 }
 
 h1 {
-    color: rgb(233, 181, 243);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+  font-weight: 600;
 }
 
 h2 {
-    color: rgba(165, 233, 233, 0.767);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+  color: var(--color-secundario);
+  /* Color rojo vibrante */
+  font-weight: 500;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    color: aliceblue;
-    text-align: justify;
-}
-
-
-
-.menu-container {
-    display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: rgb(193, 176, 235);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/assets/electric-guitar-still-life.jpg);
-    background-size: cover;
-    z-index: -1;
-    filter: blur(5px);
-}
-
-.content {
-    margin-top: 5px;
-}
-
-.card-container {
-    background-color: rgba(131, 131, 131, 0.233);
-    /* Fondo semi-transparente para mejorar la legibilidad */
-    padding: 20px;
-    margin-bottom: 20px;
+  color: #666;
+  text-align: justify;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "section"
+    "footer";
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index {
+  background-image: url('ruta-de-tu-imagen.jpg');
+  background-size: cover;
+}
+
+.container-img {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.slide {
+  width: 100vw;
+  max-width: 1000px;
+  height: 720px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide ul{
+  display: flex;
+  padding: 0px;
+  width: 400%;
+
+  animation: slide 15s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+}
+
+@keyframes slide {
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  74%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
 
 footer {
-    background-color: rgba(0, 0, 0, 0.411);
-    color: rgb(255, 255, 255);
-    padding: 15px 0;
-    text-align: center;
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 #pFooter {
-    text-align: center
+  margin: 0;
 }
 
+@media(max-width:991px) {
 
-/* MEDIA QUERIES - Tablet */
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
+  body {
+    padding: 30px;
+  }
 
+  .slider-box {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES - Responsiveness */
 @media (min-width: 1281px) {
-  
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-  
-  @media (min-width: 481px) and (max-width: 767px) {
-    
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
-    /* CSS */
-    
-  }  
+  /* CSS para escritorios grandes */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS para laptops y escritorios */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS para tablets y iPads (vertical) */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* CSS para tablets y iPads (horizontal) */
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS para tablets de baja resolución y móviles (horizontal) */
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS para la mayoría de los smartphones (vertical) */
+}
